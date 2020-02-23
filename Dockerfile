@@ -2,8 +2,8 @@ FROM openjdk:12-alpine
 
 WORKDIR /app
 
-COPY target/maven-simple-0.2*.jar /app/
+COPY target/maven-simple-0.2-SNAPSHOT.jar /app.jar
 
 CMD ["java", "-jar", "/maven-simple-0.2-SNAPSHOT.jar"]
 
-EXPOSE 80
+EXPOSE 8080

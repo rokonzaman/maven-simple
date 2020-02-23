@@ -1,5 +1,7 @@
 FROM openjdk:12-alpine
 
-COPY target/maven-simple-0.2*.jar /app.jar
+WORKDIR /app
 
-CMD ["java", "-jar", "/app.jar"]
+COPY target/maven-simple-0.2*.jar /app
+
+CMD ["java", "-jar", "/maven-simple-0.2-SNAPSHOT.jar"]
